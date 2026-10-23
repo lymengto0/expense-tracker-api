@@ -33,6 +33,8 @@ public class AppDbContext : DbContext
             .Property(t => t.Type)
             .HasConversion<string>()
             .HasMaxLength(20);
+        b.Entity<Transaction>()
+            .HasIndex(t => new { t.UserId, t.Date });
 
         // Deleting a user deletes their data
         b.Entity<Category>()

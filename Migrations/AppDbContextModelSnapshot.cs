@@ -78,7 +78,7 @@ namespace ExpenseTracker.Api.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "Date");
 
                     b.ToTable("Transactions");
                 });
