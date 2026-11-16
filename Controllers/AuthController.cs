@@ -48,7 +48,7 @@ public class AuthController : ControllerBase
         var email = dto.Email.Trim().ToLowerInvariant();
         var user = await _db.Users.FirstOrDefaultAsync(u => u.Email == email);
 
-        // Same message for both cases, so attackers can't tell which emails exist
+        // Same message for both cases
         if (user is null || !BCrypt.Net.BCrypt.Verify(dto.Password, user.PasswordHash))
             return Unauthorized(new { message = "Invalid email or password." });
 
