@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers()
     .AddJsonOptions(o =>
         o.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter()));
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+
 builder.Services.AddOpenApi();
 
 
@@ -48,9 +48,12 @@ builder.Services
                 .AllowAnyHeader()
                 .AllowAnyMethod());
     });
+
 builder.Services.AddExceptionHandler<ExpenseTracker.Api.Middleware.GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 builder.Services.AddAuthorization();
+builder.Services.AddHealthChecks()
+    .AddDbContextCheck<AppDbContext>("database");
 
 var app = builder.Build();
 app.UseExceptionHandler();
@@ -65,7 +68,7 @@ app.UseHttpsRedirection();
 app.UseCors("Frontend");
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapHealthChecks("/health");
 app.MapControllers();
 
 app.Run();
