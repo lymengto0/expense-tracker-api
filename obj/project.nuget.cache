@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1dlVZdcwRcY=",
+  "dgSpecHash": "GcZfcOCATh0=",
   "success": true,
   "projectFilePath": "D:\\Project\\ExpenseTracker\\ExpenseTracker.Api\\ExpenseTracker.Api.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\Admins\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\9.0.0\\pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
+    "C:\\Users\\Admins\\.nuget\\packages\\scalar.aspnetcore\\2.21.0\\scalar.aspnetcore.2.21.0.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\Admins\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",
