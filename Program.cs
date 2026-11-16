@@ -47,10 +47,12 @@ builder.Services
                 .AllowAnyHeader()
                 .AllowAnyMethod());
     });
-
+builder.Services.AddExceptionHandler<ExpenseTracker.Api.Middleware.GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 builder.Services.AddAuthorization();
-var app = builder.Build();
 
+var app = builder.Build();
+app.UseExceptionHandler();
 // Configure the HTTP request 
 if (app.Environment.IsDevelopment())
 {
